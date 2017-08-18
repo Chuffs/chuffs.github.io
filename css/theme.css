@@ -1,9 +1,13 @@
 body, html {
     height: 100%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px
 }
 
 .bg {
-    background-image: url("MicroMattChannelArt.jpg");
+    background-image: url("websitebackground.png");
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,4 +62,8 @@ a:hover::after {
 p.home-logo {
   text-align: center;
   padding-top: 15ex;
+}
+
+h1 {
+
 }
