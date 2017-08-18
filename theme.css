@@ -1,0 +1,61 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url("MicroMattChannelArt.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font: 'azo-sans-web';
+  font-variant-caps: all-small-caps;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 400;
+  border-radius: 1ex;
+  background: none;
+}
+
+li {
+  display: inline;
+  float: right;
+  padding-right: 5ex;
+  padding-top: 1ex;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a {
+    position: relative;
+    text-shadow: 2px 2px black;
+}
+a:hover::before {
+    content:'| ';
+    position: absolute;
+    left: -10px;   /* equal to padding-left */
+}
+
+a:hover::after {
+    content:'| ';
+    position: absolute;
+    right: -10px;   /* equal to padding-left */
+}
+
+p.home-logo {
+  text-align: center;
+  padding-top: 15ex;
+}
