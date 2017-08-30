@@ -1,69 +1,118 @@
+/* Page specifics */
 body, html {
     height: 100%;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
-    margin-left: 0px
+    margin-left: 0px;
+    font-family: "azo-sans-web",sans-serif;
 }
 
-.bg {
-    background-image: url("websitebackground.png");
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+ /* Green bar at top of webpage */
+.style-bar {
+  width: 100%;
+  height: 7px;
+  background: #6ac68f;
 }
 
+.website-logo {
+  width: 10em;
+}
+
+/* Navbar specific styling */
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 7px;
   overflow: hidden;
-  font: 'azo-sans-web';
-  font-variant-caps: all-small-caps;
-  font-style: normal;
-  font-size: 30px;
-  font-weight: 400;
-  border-radius: 1ex;
-  background: none;
 }
 
 li {
+  color: white;
+  font-family: "bungee", sans-serif;
   display: inline;
-  float: right;
-  padding-right: 5ex;
-  padding-top: 1ex;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+.navbar-item {
   text-decoration: none;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar-item:hover {
+  text-decoration: none;
+  color: black;
+  background: #649cb4;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  max-height: 75px;
+  border-bottom: 2px solid black;
+  z-index: 9;
+}
+
+.navbar-nav {
+  padding-top: 10px;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+}
+
+.navbar-left {
+  padding-left: 2em;
+  width: 12em;
+  float: left;
+}
+
+.navbar-right {
+  margin-left: 14em;
+}
+
+.main {
+  margin-top: 75px;
+}
+
+.menu {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.hero-image {
+  margin-top: 72px;
+  background-image: url("../images/websitebackground.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.logo-image {
+  text-align: center;
+  padding-top: 7%;
+}
+
+.welcome {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
 }
 
 a {
-    position: relative;
-    text-shadow: 2px 2px black;
-}
-a:hover::before {
-    content:'| ';
-    position: absolute;
-    left: -10px;   /* equal to padding-left */
-}
-
-a:hover::after {
-    content:'| ';
-    position: absolute;
-    right: -10px;   /* equal to padding-left */
-}
-
-p.home-logo {
-  text-align: center;
-  padding-top: 15ex;
-}
-
-h1 {
-
+  text-decoration: none;
+  color: black;
 }
