@@ -37,12 +37,52 @@
     float: left;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: white;
-    border: 1px solid white;
+    background-color: inherit;
+    display: inline;
+    /* border: 1px solid red; */
   }
 
   .row::after {
     content: "";
     clear: both;
     display: table;
+  }
+
+  .row {
+    margin-top: -21px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: inherit;
+    z-index: 2;
+  }
+
+  .top-row {
+    padding-top: 75px;
+    left: 50%;
+    text-align: center;
+  }
+
+  .bottom-row {
+    margin-top: -30px;
+    margin-left: 180px;
+    text-align: center;
+  }
+
+  p.center-text {
+    text-align: center;
+    background-color: #333;
+  }
+
+  h1.center-text {
+    text-align: center;
+    color: white;
+    font-size: 1em;
+  }
+
+  .bottom {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
   }

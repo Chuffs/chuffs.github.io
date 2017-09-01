@@ -6,6 +6,7 @@ body, html {
     margin-bottom: 0px;
     margin-left: 0px;
     font-family: "azo-sans-web",sans-serif;
+    background-color: #f1f1f1;
 }
 
  /* Green bar at top of webpage */
@@ -87,8 +88,8 @@ li {
 }
 
 .hero-image {
-  margin-top: 72px;
-  background-image: url("../images/websitebackground.png");
+  margin-top: -100px;
+  background-image: url("../assets/heatsink.JPG");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,18 +102,150 @@ li {
   padding-top: 7%;
 }
 
-.welcome {
+a.navbar-item {
+  text-decoration: none;
+  color: black;
+}
+
+a.blog-title {
+  text-decoration: none;
+  color: black;
+}
+
+.recent-blog-content {
+  padding-left: 25px;
+}
+
+.page-contents {
+  padding-top: 150px;
+  margin-bottom: 100px;
+}
+
+.content {
+  padding-top: 1em;
+  padding-bottom: 30px;
+}
+
+.recent-post {
+  padding-top: 2em;
+}
+
+.continuereading {
+  padding-top: 5px;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+}
+
+a.continuereading {
+  text-decoration: none;
+  color: black;
+}
+
+.entry-title {
+  font-family: "fira-sans",sans-serif;
+  font-weight: 700px;
+  font-style: normal;
+}
+
+h1.welcome {
+  display: inline;
+  font-size: 75px;
+}
+
+h1.welcome-small {
+  display: inline;
+  font-size: 40px;
+}
+
+h1.tag-line {
+  font-size: 25px;
+}
+
+.span-blue {
+  margin-top: -1em;
+  height: 250px;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: #649cb4;
+  color: white;
+  z-index: 1;
+}
+
+.span-grey {
+  margin-top: -1em;
+  height: 300px;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: #333;
+  color: white;
+  z-index: 1;
+}
+
+.icon {
+  width: 100%;
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.main-content {
+  background-color: #f1f1f1 !important;
+  margin-bottom: 30px;
 }
 
 .footer {
-  margin-top: 20px;
-  text-align: center;
+  height: 100px;
+  background-color: #333;
+  width: 100%;
+  bottom: 0px;
+  margin-bottom: -20px;
 }
 
-a {
+.footer-intense {
+  height: 30px;
+  background-color: black;
+  bottom: 0px;
+  width: 100%;
+}
+
+.footer-text {
+  padding-top: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: black;
+}
+
+a.footer {
+  text-decoration: none;
+  color: white;
+  background: black;
+}
+
+.social-span {
+  margin-top: -1em;
+  height: 75px;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: #649cb4;
+  color: white;
+  z-index: 1;
+}
+
+.social-icons {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+}
+
+.postlinks {
   text-decoration: none;
   color: black;
+}
+
+.otherposts {
+  border-left: 1px solid black;
+}
+
+.allposts {
+  padding-left: 25px;
+  padding-bottom: 10px;
 }
