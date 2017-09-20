@@ -191,6 +191,11 @@ h1.tag-line {
   margin-bottom: 30px;
 }
 
+.footer-div {
+  width: 100%;
+  bottom: 0px;
+}
+
 .footer {
   height: 100px;
   background-color: #333;
@@ -255,5 +260,9 @@ a.footer {
   padding-left: 15%;
   padding-right: 15%;
   padding-bottom: 50px;
+  height: auto !important;
+}
 
+.footer-push {
+  height: 212px;
 }
