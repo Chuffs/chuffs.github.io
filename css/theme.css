@@ -193,6 +193,7 @@ h1.tag-line {
 .main-content {
   background-color: #f1f1f1 !important;
   margin-bottom: 30px;
+  min-height: 60%;
 }
 
 .footer-div {
@@ -265,10 +266,6 @@ a.footer {
   padding-right: 30%;
   padding-bottom: 50px;
   height: auto !important;
-}
-
-.footer-push {
-  height: 212px;
 }
 
 .blog-date {
