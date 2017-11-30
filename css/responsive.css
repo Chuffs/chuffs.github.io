@@ -3,7 +3,7 @@
   .col-m-1 {width: 25%;}
   .col-m-2 {width: 50%;}
   .col-m-3 {width: 75%;}
-  .col-m-4 {width: 1000%;}
+  .col-m-4 {width: 100%;}
 
   /* For Tablet: */
   .col-t-1 {width: 8.33%;}
@@ -86,3 +86,10 @@
     position: fixed;
     bottom: 0px;
   }
+
+@media screen and (max-width: 1024px) {
+  .blog-page {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+}

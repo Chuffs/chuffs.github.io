@@ -20,13 +20,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 <!-- Stylesheets for website -->
-<link rel = "stylesheet" type = "text/css" href = "http://micromatt.tech/css/theme.css">
-<link rel = "stylesheet" type = "text/css" href = "http://micromatt.tech/css/responsive.css">
+<link rel = "stylesheet" type = "text/css" href = "http://micromatt.tech/site.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!-- JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 <!-- Favicon -->
 <link rel = "shortcut icon" href = "/assets/favicon.ico">
+
+<!-- Responsive NavBar JS -->
+<!-- script to toggle menu on mobile devices -->
+<script>
+  function navbarToggle() {
+      var x = document.getElementById("mobile-nav");
+      if (x.className === "link") {
+          x.className += "-toggled";
+      } else {
+          x.className = "link";
+      }
+  }
+</script>
+
+
+<!-- beta overlay -->
+<!-- script to toggle view of beta-overlay -->
+<script>
+  function overlayToggle() {
+    var x = document.getElementById("overlay");
+    x.className = "overlayHidden";
+  }
+</script>
+
 
 </head>
 
@@ -45,18 +71,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="style-bar"></div>
   <!-- Website navigation -->
     <ul>
-      <div class="navbar-nav">
-        <div class="navbar-left">
-          <li><a href="/"><img src="http://micromatt.tech/assets/websitelogo.png" class="website-logo"></a></li>
-        </div>
-        <div class="navbar-right">
-          <li><a href="http://micromatt.tech/blog/" class="navbar-item">Blog</a></li>
-          <li><a href="http://micromatt.tech/projects/" class="navbar-item">Projects</a></li>
-          <li><a href="http://micromatt.tech/about/" class="navbar-item">About</a></li>
-          <li><a href="http://micromatt.tech/contact/" class="navbar-item">Contact</a></li>
-        </div>
+      <div class="navbar-nav" id="navbar">
+        <li><a href="/"><img src="http://micromatt.tech/assets/websitelogo.png" style="width: 10em" class="navbar-logo"></a></li>
+        <li><a href="http://micromatt.tech/blog/" class="navbar-item">Blog</a></li>
+        <li><a href="http://micromatt.tech/projects/" class="navbar-item">Projects</a></li>
+        <li><a href="http://micromatt.tech/about/" class="navbar-item">About</a></li>
+        <li><a href="http://micromatt.tech/contact/" class="navbar-item">Contact</a></li>
+        <li><a href="javascript:void(0);" style="font-size:25px;" class="navbar-toggle" onclick="navbarToggle()">&#9776;</a></li>
       </div>
     </ul>
+</div>
+<div class="link" id="mobile-nav">
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/blog/"><div>Blog</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/projects/"><div>Projects</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/about/"><div>About</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/contact/"><div>Contact</div></a>
+  </div>
 </div>
 
 
@@ -70,28 +107,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
   <div class="social-span">
-  <div class="row">
-    <div class="col-3">
-      <p style="text-align:center;">
-        <a href="https://www.youtube.com/channel/UCsjYwlaeT48XV7kxRLkE6bw" class="social-icons">
-          <i class="fa fa-youtube-play" aria-hidden="true"></i>
-        </a>
-      </p>
-    </div>
-    <div class="col-3">
-      <p style="text-align:center;">
-        <a href="https://twitter.com/chuffs97" class="social-icons">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-      </p>
-    </div>
-    <div class="col-3">
-      <p style="text-align:center;">
-        <a href="https://github.com/Chuffs" class="social-icons">
-          <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
-      </p>
-    </div>
+  <div class="social-container">
+    <a href="https://www.youtube.com/channel/UCsjYwlaeT48XV7kxRLkE6bw"><i class="fa fa-youtube-play fa-4x"></i></a>
+    <a href="https://twitter.com/chuffs97"><i class="fa fa-twitter fa-4x"></i></a>
+    <a href="https://github.com/Chuffs"><i class="fa fa-github fa-4x"></i></a>
   </div>
 </div>
 

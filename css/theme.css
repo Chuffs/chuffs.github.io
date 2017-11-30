@@ -1,83 +1,16 @@
 /* Page specifics */
 body, html {
-    min-height: 100%;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-family: "azo-sans-web",sans-serif;
-    background-color: #f1f1f1;
-}
-
- /* Green bar at top of webpage */
-.style-bar {
-  width: 100%;
-  height: 7px;
-  background: #6ac68f;
-}
-
-.website-logo {
-  width: 10em;
-}
-
-/* Navbar specific styling */
-ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 7px;
-  overflow: hidden;
-}
-
-li {
-  color: white;
-  font-family: "bungee", sans-serif;
-  display: inline;
-}
-
-.navbar-item {
-  text-decoration: none;
-  color: black;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.navbar-item:hover {
-  text-decoration: none;
-  color: black;
-  background: #649cb4;
-}
-
-.navbar {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  max-height: 75px;
-  border-bottom: 2px solid black;
-  z-index: 9;
-}
-
-.navbar-nav {
-  padding-top: 10px;
-  width: 100%;
-  overflow: hidden;
-  background: white;
-}
-
-.navbar-left {
-  padding-left: 2em;
-  width: 12em;
-  float: left;
-}
-
-.navbar-right {
-  margin-left: 14em;
+  min-height: 100%;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: "azo-sans-web",sans-serif;
+  background-color: #f1f1f1;
 }
 
 .main {
@@ -104,16 +37,6 @@ li {
 .logo-image {
   text-align: center;
   padding-top: 7%;
-}
-
-a.navbar-item {
-  text-decoration: none;
-  color: black;
-}
-
-a.blog-title {
-  text-decoration: none;
-  color: black;
 }
 
 .recent-blog-content {
@@ -244,6 +167,7 @@ a.footer {
 .social-icons {
   font-size: 40px;
   text-decoration: none;
+  position: absolute;
   color: white;
 }
 
@@ -261,29 +185,29 @@ a.footer {
   padding-bottom: 10px;
 }
 
+/* Blog Page Style*/
 .blog-page {
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 10em;
+  padding-right: 10em;
   padding-bottom: 50px;
   height: auto !important;
 }
 
 .blog-date {
   padding-top: -10px;
-  size: 7px;
+  font-size: 0.75em;
   text-align: left;
   font-style: italic;
 }
 
 .blog-content {
   padding-left: 25px;
+  font-size: 1em;
 }
 
 .blog-title {
-  font-size: 35px;
-  font-weight: bold;
   padding-bottom: -25px;
-  line-height: 0%
+  font-size: 2em;
 }
 
 .PageNavigation {
