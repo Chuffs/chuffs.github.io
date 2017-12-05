@@ -48,6 +48,10 @@ p.x {
   text-align: right;
 }
 
+div.overlayHidden p {
+  display: none;
+}
+
 p.beta {
   padding-right: 15px;
 }
@@ -240,11 +244,21 @@ a.beta:hover {
 
 .blog-title {
   text-decoration: none;
+  font-style: normal;
   color: black;
+}
+
+div.entry-content a {
+  font-style: italic;
+}
+
+div.entry-content a:hover {
+  background: #649cb4;
 }
 
 p.continue {
   text-align: center;
+  font-style: normal;
 }
 
 @media screen and (min-width: 1024px) {
@@ -320,7 +334,7 @@ p.continue {
 
 i {
   padding-top: 25px;
-  width: 32%;
+  width: 30%;
   display: inline-block;
 }
 
