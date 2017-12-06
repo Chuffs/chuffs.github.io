@@ -338,3 +338,24 @@ i {
   display: inline-block;
 }
 
+.footer {
+  margin-top: -2%;
+  height: 30px;
+  background: #333;
+  padding-bottom: 5px;
+  font-family: "bungee", sans-serif;
+  color: #cccccc;
+  font-size: 1em;
+  text-align: center;
+}
+
+div.footer p {
+  color: #cccccc;
+  background: #333;
+}
+
+div.footer a {
+  color: #cccccc;
+  background: #333;
+}
+
