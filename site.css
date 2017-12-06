@@ -1,4 +1,4 @@
-body, html {
+html, body {
   min-height: 100%;
   margin-top: 0px;
   margin-right: 0px;
@@ -357,5 +357,12 @@ div.footer p {
 div.footer a {
   color: #cccccc;
   background: #333;
+}
+
+
+
+
+  div.page-contents {
+  min-height: 306px;
 }
 
