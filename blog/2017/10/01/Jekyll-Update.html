@@ -33,6 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel = "stylesheet" type = "text/css" href = "http://micromatt.tech/site.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
 
 <!-- JQUERY -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -95,16 +96,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-    <div class="">
-      <h1 class=""> Jekyll Site Update </h1>
-      <h4 class="">
+    <div class="blog-content">
+      <h1 class="blog-title"> Jekyll Site Update </h1>
+      <h4 class="blog-date">
         
         October
         1st
           ,
         2017
       </h4>
-      <div class="">
+      <div class="blog-post">
         <p>The site is now using Jekyll!</p>
 
 <p>I have to admit it took a <strong>VERY</strong> long time to convert it to the more fluid and dynamic ways of Jekyll. As you can see the homepage is a <em>little</em> different to what it was in “version one”. I have added a  few more parts to the page, such as sections for an about the site (about me page will be coming later, along with a contact form) as well as a truncated snapshot of the most recent blog post.</p>
@@ -124,39 +125,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a class="next" href="/blog/2017/11/11/Development-Update.html">Next Post &raquo;</a>
       </div>
 
-      <div id="comments">
-	
-		
-	
-	<h1>Post a comment</h1>
-	<p style="font-style: italic">
-		All comments are held for moderation; basic HTML formatting accepted.
-	</p>
-	<form id="commentform" method="POST" action="http://micromatt.tech/commentsubmit.php">
-		<input type="hidden" name="post_id" value="/blog/2017/10/01/Jekyll-Update" />
-		<input type="hidden" name="return_url" value="http://micromatt.tech/blog/2017/10/01/Jekyll-Update.html" />
-		<table>
-			<tr>
-				<th>Name:</th>
-				<td><input type="text" size="25" name="name" /> (required)</td>
-			</tr>
-			<tr>
-				<th>E-mail:</th>
-				<td><input type="text" size="25" name="email" /> (required, not published)</td>
-			</tr>
-			<tr>
-				<th>Website:</th>
-				<td><input type="text" size="25" name="link" /> (optional)</td>
-			</tr>
-			<tr>
-				<td colspan="2"><textarea name="comment" rows="10" cols="60" ></textarea></td>
-			</tr>
-			<tr>
-				<td><input type="submit" name="submit" value="Submit Comment" /></td>
-			</tr>
-		</table>
-	</form>
-</div>
+      </br>
+
+        <h3>Post a comment</h3>
+  <p style="font-style: italic; font-size: 0.9em;">
+    All comments are held for moderation; basic HTML or Markdown formatting accepted.
+  </p>
+
+    <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net" class="comment"
+    action="https://script.google.com/macros/s/AKfycbyi1FnB0I54txjYv9UXMWuHjT4ty-LG682beiZzbJe58nFL0Pc/exec">
+
+      <input type="hidden" name="Post Title" value="Jekyll Site Update" />
+
+      <table class="comment">
+        <tr>
+          <th>Name:</th>
+          <td><input type="text" size="25" name="name" /> (required)</td>
+        </tr>
+        <tr>
+          <th>E-mail:</th>
+          <td><input type="text" size="25" name="email" /> (required, not published)</td>
+        </tr>
+        <tr>
+          <td colspan="2"><textarea name="comment" rows="10" cols="60" ></textarea></td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="submit" value="Submit Comment" /></td>
+        </tr>
+      </table>
+
+    </form>
+
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+  <!-- <script data-cfasync="false" type="text/javascript"
+  src="/form-submission-handler.js"></script> -->
 
 
     </div>
