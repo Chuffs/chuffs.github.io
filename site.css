@@ -364,6 +364,7 @@ div.footer a {
   text-align: center;
   width: 90%;
   max-width: 1080px;
+  margin: 0 auto;
 }
 
 .blog-title {
