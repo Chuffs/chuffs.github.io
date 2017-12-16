@@ -236,13 +236,13 @@ a.beta:hover {
 }
 
 /* recent blog posts */
-.blog-content {
+.blog-content-home {
   padding-top: 25px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.blog-title {
+.blog-title-home {
   text-decoration: none;
   font-style: normal;
   color: black;
