@@ -211,15 +211,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         2017
       </h4>
       <div class="blog-post">
-        <p>Over the past few days I have been working on tweaking the look and feel of the entire blog page. I have attempted to go for a minimalist and clean design that is easy to read on all formats, from mobile to desktop - please let me know if there any issues with the styling of the website on certain platforms.</p>
+        <style>
+  a {
+    font-decoration: italic;
+  }
+</style>
 
-<p>We now also have working comments. Previously there was a form that linked to a PHP file that sent the comment as an email to me. Now unfortunately, as we are using github pages to host this site, PHP is not supported, so we got a rather angry unicorn when we tried to access that function.</p>
+<p>Over the past few days I have been working on tweaking the look and feel of the entire blog page. I have attempted to go for a minimalist and clean design that is easy to read on all formats, from mobile to desktop - please let me know if there any issues with the styling of the website on certain platforms.</p>
+
+<p>We now also have working comments. Previously there was a form that linked to a PHP file that sent the comment as an email to me. Now unfortunately, as we are using github pages to host this site, PHP is not supported, so we got a rather <em><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS08mouMO9hRq5nJ2VlS7X6kM6IH2RExh6pbXPCsWqwJP-n2USgLw" target="_blank">angry unicorn</a></em> when we tried to access that function.</p>
 
 <p>There are many services out there that support embedding a comment function into blogs, sush as Disqus - which is quite a popular one. I was tempted to use Disqus, however I wanted a way to allow users to comment regardless of whether or not they had a Disqus account. I was adamant to get some form of commenting system working with Jekyll’s use of collections and scripting to send emails of the comments to me, and the use YAML front matter and liquid to sort through comments for each blog post.</p>
 
 <p>Essentially the comments work by filtering through all the files located under the directory ‘_comments’ and sorting said files to their corresponding blog posts, using YAML front matter I can then specify who posted, when they posted and whether it is a new comment thread or reply to an existing comment. The submit comment works by the user selecting if they wish to submit a new comment (default) or reply to a comment thread already posted. The fields of the form then get sent to a Google spreadsheet script and emailed to me, which I then write up into markdown files for Jekyll to generate.</p>
 
-<p>With my endeavours into coding this website and learning (the hard way) how Jekyll and Liquid/Ruby work, I am considering making a portfolio and project section explaining how I went about coding certain aspects of the site, as I feel it may be helpful to some new users of Jekyll - You can already find my website repository on GitHub.</p>
+<p>With my endeavours into coding this website and learning (the hard way) how Jekyll and Liquid/Ruby work, I am considering making a portfolio and project section explaining how I went about coding certain aspects of the site, as I feel it may be helpful to some new users of Jekyll - You can already find my website repository on <em><a href="https://github.com/Chuffs/MicroMattWebsite" target="_blank">GitHub</a></em>.</p>
 
 <p>I think that will do for this blog post, hopefully all is well with the design of the website. I will start working on the other pages that my navbar and places link to.</p>
 
@@ -244,12 +250,53 @@ Matt</p>
         <h2><u>Comments</u></h2>
 
         
-          <p  class="noComments">No Comments found! Start the discussion below!</p>
+          <p> Join the discussion below!</p>
         
 
       </div>
 
       <div class="comments">
+        
+          <div class="commentThread">
+            <h3 class="comments">
+              John Smith
+            </h3>
+            <p class="commentDate"> on the
+              
+              18th
+               of
+              December
+              2017, at 9:20am said:
+            </p>
+            <p class="commentContent">
+              This is a test or sample comment on the "Comments are now live!" blog post. This is to give an example of how comments and reply will look when populated with discussion.
+
+            </p>
+
+            
+
+            <div class="commentReplys">
+              
+                <div class="singleReply">
+                  <h3 class="comments">
+                    Steve Stevenson
+                  </h3>
+                  <p class="commentDate"> on the
+                    
+                    18th
+                     of
+                    December
+                    2017, at 9:35am said:
+                  </p>
+                  <p class="replyContent">
+                    This is a test reply to John Smith's comment. I'm not entirely sure how to implement nested comments/replies (a reply to a reply) with this method of comments, hence replies are more like a 'forum' discussion in that they will be sorted chronologically. Post your own comment below.
+
+                  </p>
+                </div>
+              
+            </div>
+
+          </div>
         
       </div>
 
@@ -280,6 +327,10 @@ Matt</p>
             <option value="Comment on Comments are now live!">Submit New Comment</option>
 
             
+              <option value="Reply to Testcomment(/comments/comments_are_now_live/testcomment)" title="This is a test or sample comment on the "Comments are now live!" blog post. This is to give an example of how comments and reply will look when populated with discussion.
+">Respond to John Smith's thread.</option>
+              <input type="hidden"
+              
           </select>
           (hover for comment hint)
         </td>
