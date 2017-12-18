@@ -328,6 +328,12 @@ p.continue {
 
 @media screen and (min-width: 1024px) {
   .social-span {
+      margin-top: 450px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .social-span {
     margin-top: 450px;
   }
 }
