@@ -1,0 +1,5 @@
+poster:
+post: if new comment "post.title"
+postID: if reply to comment "comment.id"
+date:
+time:

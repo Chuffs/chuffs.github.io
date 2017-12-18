@@ -17,6 +17,18 @@ a {
   color: black;
 }
 
+.test {
+  border-color: red;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.google-ads {
+  margin-top: 150px;
+  width: 60%;
+  margin: 0 auto;
+}
+
 div.overlay {
   padding-left: 15px;
   padding-right: 15px;
@@ -365,6 +377,9 @@ div.footer a {
   width: 90%;
   max-width: 1080px;
   margin: 0 auto;
+  margin-bottom: -400px;
+  padding-bottom: 0;
+  padding-top: 5%;
 }
 
 .blog-title {
@@ -384,6 +399,14 @@ div.footer a {
   padding-left: 15%;
 }
 
+.pagination {
+  padding-bottom: 10%;
+}
+
+div.blog-content a{
+  text-decoration: italic;
+}
+
 table.comment {
   margin: auto;
   width: 50%;
@@ -394,6 +417,60 @@ table.comment {
 table textarea {
   width: 100%;
   resize: none;
+}
+
+/* comment section styling */
+div.numComments {
+  padding-top: 5%;
+}
+
+p.noComments {
+  padding-bottom: 5%;
+}
+
+div.comments {
+  text-align: left;
+  padding-left: 15%;
+}
+
+div.commentThread {
+  padding: 25px;
+}
+
+h3.comments {
+  display: inline;
+}
+
+p.commentDate {
+  display: inline;
+  font-size: 0.75em;
+}
+
+p.commentContent {
+  padding-left: 5%;
+}
+
+div.commentReplys {
+  margin-left: 5%;
+  border-left: 1px solid black;
+}
+
+div.singleReply {
+  padding-left: 5%;
+}
+
+p.replyContent {
+  padding-left: 5%;
+}
+
+#email-invalid {
+  color: red;
+}
+
+td.commentForm {
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
 }
 
 
