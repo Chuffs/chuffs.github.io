@@ -29,6 +29,10 @@ a {
   margin: 0 auto;
 }
 
+.google-auto-placed {
+  display: hidden;
+}
+
 div.overlay {
   padding-left: 15px;
   padding-right: 15px;
