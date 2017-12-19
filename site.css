@@ -29,6 +29,15 @@ a {
   margin: 0 auto;
 }
 
+.page-content {
+  text-align: center;
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 0;
+  padding-top: 5%;
+}
+
 div.overlay {
   padding-left: 15px;
   padding-right: 15px;
@@ -104,7 +113,7 @@ a.beta:hover {
   }
 
 /* navbar style - desktop */
-  ul {
+  ul.navbar {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -112,13 +121,13 @@ a.beta:hover {
     overflow: hidden;
   }
 
-  li {
+  li.navbar {
     color: white;
     font-family: "bungee", sans-serif;
     display: inline;
   }
 
-  .navbar {
+  div.navbar {
     background: white;
     height: 80px;
     border-bottom: 2px solid black;
@@ -379,13 +388,7 @@ div.footer a {
 
 
 .blog-content {
-  text-align: center;
-  width: 90%;
-  max-width: 1080px;
-  margin: 0 auto;
-  margin-bottom: -400px;
-  padding-bottom: 0;
-  padding-top: 5%;
+    margin-bottom: -400px;
 }
 
 .blog-title {
@@ -403,6 +406,14 @@ div.footer a {
   width: 75%;
   text-align: left;
   padding-left: 15%;
+}
+
+a.blog-links {
+  font-style: italic;
+  color: #649cb4
+}
+a.blog-links:hover {
+  font-weight: bold;
 }
 
 .pagination {
@@ -456,6 +467,13 @@ p.commentContent {
   padding-left: 5%;
 }
 
+p.commentPermalink {
+  padding-left: 5%;
+  text-align: right;
+  padding-top: -50px;
+  font-size: 0.75em;
+}
+
 div.commentReplys {
   margin-left: 5%;
   border-left: 1px solid black;
@@ -477,6 +495,47 @@ td.commentForm {
   margin: 0 auto;
   padding-top: 10px;
   text-align: center;
+}
+
+
+h4.archiveCount {
+  display: inline;
+}
+
+h5.archiveViewActive {
+  display: inline;
+  padding-left: 2%;
+  color: #649cb4
+}
+
+ul.archiveYear {
+  list-style-type: none;
+}
+
+span.archiveDate {
+  color: black;
+}
+
+span.archiveDate {
+  font-weight: normal;
+}
+
+a.archiveLink {
+  color: #649cb4
+}
+
+a.archiveLink:hover {
+  font-weight: bold;
+  color: black;
+}
+
+div.archivePosts {
+  text-align: left;
+}
+
+span.commentShow {
+  display: block;
+  padding-left: 5%;
 }
 
 

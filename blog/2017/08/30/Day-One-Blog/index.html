@@ -1,0 +1,326 @@
+<html>
+  <title> Welcome to MicroMatt.tech! </title>
+
+  <head>
+
+<!-- Begin Jekyll GTM tag v1.0.1 -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQS8N26');</script>
+<!-- End Jekyll GTM tag v1.0.1 -->
+
+
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+<!-- Script for Adobe Typekit -->
+<script src="https://use.typekit.net/pob8zuk.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<!-- Stylesheets for website -->
+<link rel = "stylesheet" type = "text/css" href = "http://micromatt.tech/site.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+
+<!-- JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- Favicon -->
+<link rel = "shortcut icon" href = "/assets/favicon.ico">
+
+<!-- Responsive NavBar JS -->
+<!-- script to toggle menu on mobile devices -->
+<script>
+  function navbarToggle() {
+      var x = document.getElementById("mobile-nav");
+      if (x.className === "link") {
+          x.className += "-toggled";
+      } else {
+          x.className = "link";
+      }
+  }
+</script>
+
+
+</head>
+
+
+  <script>
+  function validEmail(email) { // see:
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+  }
+
+  function validateHuman(honeypot) {
+    if (honeypot) {  //if hidden form filled up
+      console.log("Robot Detected!");
+      return true;
+    } else {
+      console.log("Welcome Human!");
+    }
+  }
+
+  // get all data in form and return object
+  function getFormData() {
+    var form = document.getElementById("gform");
+    var elements = form.elements; // all form elements
+    var fields = Object.keys(elements).map(function(k) {
+      if(elements[k].name !== undefined) {
+        return elements[k].name;
+      // special case for Edge's html collection
+      }else if(elements[k].length > 0){
+        return elements[k].item(0).name;
+      }
+    }).filter(function(item, pos, self) {
+      return self.indexOf(item) == pos && item;
+    });
+    var data = {};
+    fields.forEach(function(k){
+      data[k] = elements[k].value;
+      var str = ""; // declare empty string outside of loop to allow
+                    // it to be appended to for each item in the loop
+      if(elements[k].type === "checkbox"){ // special case for Edge's html collection
+        str = str + elements[k].checked + ", "; // take the string and append
+                                                // the current checked value to
+                                                // the end of it, along with
+                                                // a comma and a space
+        data[k] = str.slice(0, -2); // remove the last comma and space
+                                    // from the  string to make the output
+                                    // prettier in the spreadsheet
+      }else if(elements[k].length){
+        for(var i = 0; i < elements[k].length; i++){
+          if(elements[k].item(i).checked){
+            str = str + elements[k].item(i).value + ", "; // same as above
+            data[k] = str.slice(0, -2);
+          }
+        }
+      }
+    });
+
+    // add form-specific values into the data
+    data.formDataNameOrder = JSON.stringify(fields);
+    data.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+    data.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+    console.log(data);
+    return data;
+  }
+
+  function handleFormSubmit(event) {  // handles form submit withtout any jquery
+    event.preventDefault();           // we are submitting via xhr below
+    var data = getFormData();         // get the values submitted in the form
+
+    if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
+      return false;
+    }
+
+    if( !validEmail(data.email) ) {   // if email is not valid show error
+      document.getElementById('email-invalid').style.display = 'block';
+      return false;
+    } else {
+      var url = event.target.action;  //
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      // xhr.withCredentials = true;
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onreadystatechange = function() {
+          console.log( xhr.status, xhr.statusText )
+          console.log(xhr.responseText);
+          document.getElementById('gform').style.display = 'none'; // hide form
+          document.getElementById('thankyou_message').style.display = 'block';
+          return;
+      };
+      // url encode form data for sending as post data
+      var encoded = Object.keys(data).map(function(k) {
+          return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+      }).join('&')
+      xhr.send(encoded);
+    }
+  }
+  function loaded() {
+    console.log('contact form submission handler loaded successfully');
+    // bind to the submit event of our form
+    var form = document.getElementById('gform');
+    form.addEventListener("submit", handleFormSubmit, false);
+  };
+  document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+
+
+  <body>
+
+    <!-- Begin Jekyll GTM tag v1.0.1 -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQS8N26"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Jekyll GTM tag v1.0.1 -->
+
+    <div class="navbar">
+  <!-- Green bar at top of page -->
+  <div class="style-bar"></div>
+  <!-- Website navigation -->
+    <ul class="navbar">
+      <div class="navbar-nav" id="navbar">
+        <li class="navbar"><a href="/"><img src="http://micromatt.tech/assets/websitelogo.png" style="width: 10em" class="navbar-logo"></a></li>
+        <li class="navbar"><a href="http://micromatt.tech/blog-archive/" class="navbar-item">Blog</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/projects/" class="navbar-item">Projects</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/about/" class="navbar-item">About</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/contact/" class="navbar-item">Contact</a></li>
+        <li class="navbar"><a href="javascript:void(0);" style="font-size:25px;" class="navbar-toggle" onclick="navbarToggle()">&#9776;</a></li>
+      </div>
+    </ul>
+</div>
+<div class="link" id="mobile-nav">
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/blog/"><div>Blog</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/projects/"><div>Projects</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/about/"><div>About</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/contact/"><div>Contact</div></a>
+  </div>
+</div>
+
+
+    <div class="page-content blog-content">
+      <h1 class="blog-title"> Welcome to MicroMatt.tech! </h1>
+      <h4 class="blog-date">
+        
+        August
+        30th
+        ,
+        2017
+      </h4>
+      <div class="blog-post">
+        <p>Welcome to the MicroMatt blog, the blog and project portfolio for micromatt.tech and MicroMatt on YouTube. I plan to update this blog once every week or so with what is going on with certain projects and with the website itself.</p>
+
+<p>As you may have noticed this site is, so far, a one page wonder. There are links that don’t go anywhere, empty spaces, etc, etc. Over the next few months I plan to populate these pages and get a fully working website before the new year, I am also taking steps to make a mobile version of the website. Furthermore, I do plan on adding Jekyll to this site, which will allow me to better serve blot like posts and keep the site up to date - I’ll let you know how it goes.</p>
+
+<p>As for content on this web-based portfolio, expect to see tech content, varying from tech reviews to in depth tech related projects - such as computer/server builds and electronic design.</p>
+
+<p>I don’t plan to start the majority of my larger projects I have planned until the new year and 2018, but I will update this site over the next coming months, some projects that I definitely want to start include a DIY keyboard, a MicroChip PIC18 development board and various home servers.</p>
+
+<p>Now a bit about me - I am a 20 year old tech enthusiast currently studying The Bachelor of Engineering (Computer and Network Science). I have a strong love for all sorts of tech including PC components, programming and electronic design.</p>
+
+<p>If you want to keep up to date with MicroMatt, I have a <a href="https://twitter.com/chuffs97" title="My Twitter" target="_blank" class="blog-links">Twitter account</a> and a <a href="https://www.youtube.com/channel/UCsjYwlaeT48XV7kxRLkE6bw" title="My YouTube Channel" target="_blank" class="blog-links">YouTube account</a> - I do plan to add some form of newsletter at a later stage too.</p>
+
+<p>Thank you for reading the first entry of the blog, I hope to post more and be as active as I can be. Peace for now,</p>
+
+<p>Matt</p>
+
+      </div>
+
+      <div class="pagination">
+          <a class="prev" href="">&laquo; Previous Post</a>
+          |
+          <a class="next" href="/blog/2017/10/01/Jekyll-Update/">Next Post &raquo;</a>
+      </div>
+
+      <hr>
+
+      
+
+
+<div class="numComments">
+
+  <h2><u>Comments</u></h2>
+
+  
+    <p  class="noComments">No Comments found! Start the discussion below!</p>
+  
+
+</div>
+
+<div class="comments">
+  
+</div>
+
+<hr>
+
+<div class="sumbitComment">
+  <h3>Post a comment</h3>
+<p style="font-style: italic; font-size: 0.9em;">
+  All comments are held for moderation; basic HTML or Markdown formatting accepted.
+</p>
+
+  <form id="gform" method="POST" class="pure-form pure-form-stacked" class="comment"
+  action="https://script.google.com/macros/s/AKfycbyvRVcJjsme-GGnlHtVHTxnYu7AcR-IPVDQUUvraiSHZ98lUN8/exec">
+
+    <table class="comment">
+      <tr>
+        <th>Name:</th>
+        <td><input type="text" size="25" name="name" placeholder="John Smith"/> (required)</td>
+      </tr>
+      <tr>
+        <th>E-mail:</th>
+        <td><input type="text" size="25" name="email" placeholder="your.name@email.com"/> (required, not published)</td>
+        <span id="email-invalid" style="display:none; font-color: red;">Please enter a valid email address!</span>
+      </tr>
+      <tr>
+        <th>Please Select:</th>
+        <td>
+          <select name="Post ID">
+            <option value="Comment on Welcome to MicroMatt.tech!">Submit New Comment</option>
+
+            
+          </select>
+          (hover for comment hint)
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><textarea name="message" rows="10" cols="60"></textarea></td>
+      </tr>
+      <tr>
+        <td class="commentForm"><input type="submit" name="submit" value="Submit Comment"/></td>
+      </tr>
+    </table>
+
+  </form>
+
+<!-- Customise the Thankyou Message People See when they submit the form: -->
+<div style="display:none;" id="thankyou_message">
+  <h2>Thank you for your comment! Your comment is queued for moderation.</h2>
+  <h4>If you wish to contact us, please use our <em><a href="/contact/">contact form</a></em> instead.<h4>
+</div>
+
+</div>
+
+
+      <div class="google-ads">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-9063236029631516"
+             data-ad-slot="4845593260"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+    </div>
+
+    <div class="social-span">
+  <div class="social-container">
+    <a href="https://www.youtube.com/channel/UCsjYwlaeT48XV7kxRLkE6bw"><i class="fa fa-youtube-play fa-3x"></i></a>
+    <a href="https://twitter.com/chuffs97"><i class="fa fa-twitter fa-3x"></i></a>
+    <a href="https://github.com/Chuffs"><i class="fa fa-github fa-3x"></i></a>
+  </div>
+</div>
+
+
+    <div class="footer">
+  <p>&copy;2017 micromatt.tech | <a href="http://micromatt.tech/privacypolicy.htm">Privacy Policy</a> | <a href="http://micromatt.tech/contact/">Contact Us</a>
+</div>
+
+
+  </body>
+</html>
