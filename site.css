@@ -269,14 +269,6 @@ a.beta:hover {
   color: black;
 }
 
-div.entry-content a {
-  font-style: italic;
-}
-
-div.entry-content a:hover {
-  background: #649cb4;
-}
-
 p.continue {
   text-align: center;
   font-style: normal;
