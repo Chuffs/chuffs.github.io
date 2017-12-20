@@ -25,7 +25,7 @@ a {
 
 .google-ads {
   margin-top: 150px;
-  width: 60%;
+  height: 150px;
   margin: 0 auto;
 }
 
@@ -487,6 +487,10 @@ p.replyContent {
   padding-left: 5%;
 }
 
+h3.postComment {
+  padding-top: 5%;
+}
+
 #email-invalid {
   color: red;
 }
@@ -497,6 +501,26 @@ td.commentForm {
   text-align: center;
 }
 
+
+span.blogTitle {
+  display: block;
+}
+
+span.blogComments {
+  display: block;
+}
+
+div.blogContentOuter {
+  width: 90%;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+p.totalPosts {
+  padding-top: 50px;
+}
 
 h4.archiveCount {
   display: inline;
@@ -538,6 +562,18 @@ span.commentShow {
   padding-left: 5%;
 }
 
+
+div.blogShare {
+  width: 30%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+i.blogShare {
+  padding: 0;
+  padding-top: 25px;
+  margin: 0;
+}
 
   div.page-contents {
   min-height: 306px;

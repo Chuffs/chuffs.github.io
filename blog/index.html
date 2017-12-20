@@ -1,0 +1,392 @@
+<html>
+
+  <head>
+
+<!-- Begin Jekyll GTM tag v1.0.1 -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQS8N26');</script>
+<!-- End Jekyll GTM tag v1.0.1 -->
+
+
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+<!-- Script for Adobe Typekit -->
+<script src="https://use.typekit.net/pob8zuk.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<!-- Stylesheets for website -->
+<link rel = "stylesheet" type = "text/css" href = "http://micromatt.tech/site.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+
+<!-- JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- Favicon -->
+<link rel = "shortcut icon" href = "/assets/favicon.ico">
+
+<!-- Responsive NavBar JS -->
+<!-- script to toggle menu on mobile devices -->
+<script>
+  function navbarToggle() {
+      var x = document.getElementById("mobile-nav");
+      if (x.className === "link") {
+          x.className += "-toggled";
+      } else {
+          x.className = "link";
+      }
+  }
+</script>
+
+
+</head>
+
+
+  <title>Blog | micromatt.tech</title>
+
+  <body>
+
+    <!-- Begin Jekyll GTM tag v1.0.1 -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQS8N26"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Jekyll GTM tag v1.0.1 -->
+
+
+    <div class="navbar">
+  <!-- Green bar at top of page -->
+  <div class="style-bar"></div>
+  <!-- Website navigation -->
+    <ul class="navbar">
+      <div class="navbar-nav" id="navbar">
+        <li class="navbar"><a href="/"><img src="http://micromatt.tech/assets/websitelogo.png" style="width: 10em" class="navbar-logo"></a></li>
+        <li class="navbar"><a href="http://micromatt.tech/blog/" class="navbar-item">Blog</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/projects/" class="navbar-item">Projects</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/about/" class="navbar-item">About</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/contact/" class="navbar-item">Contact</a></li>
+        <li class="navbar"><a href="javascript:void(0);" style="font-size:25px;" class="navbar-toggle" onclick="navbarToggle()">&#9776;</a></li>
+      </div>
+    </ul>
+</div>
+<div class="link" id="mobile-nav">
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/blog/"><div>Blog</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/projects/"><div>Projects</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/about/"><div>About</div></a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/contact/"><div>Contact</div></a>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <h1>Blog</h1>
+      <p>Most recent posts on micromatt.tech</p>
+      <p>If you wish to see all blog posts, please visit the
+        <a href="http://micromatt.tech/blog-archive/" class="blog-links">archive.</a>
+      </p>
+
+      <hr>
+
+      
+      
+        <span class="blogTitle"><h3><a href="/blog/2017/12/18/Comments-Update/">Comments are now live!</a></h3></span>
+        <span class="blogComments">
+          
+          
+
+          3 comments
+        </span>
+        <span class="blogComments">
+          ...
+        </span>
+        <div class="blogContentOuter">
+          <p>Over the past few days I have been working on tweaking the look and feel of the entire blog page. I have attempted to go for a minimalist and clean design that is easy to read on all formats, from mobile to desktop - please let me know if there any issues with the styling of the website on certain platforms.</p>
+
+<p>We now also have working comments. Previously there was a form that linked to a PHP file that sent the comment as an email to me. Now unfortunately, as we are using github pages to host this site, PHP is not supported, so we got a rather <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS08mouMO9hRq5nJ2VlS7X6kM6IH2RExh6pbXPCsWqwJP-n2USgLw" target="_blank" class="blog-links">angry unicorn</a> when we tried to access that function.</p>
+
+<p>There are many services out there that support embedding a comment function into blogs, sush as Disqus - which is quite a popular one. I was tempted to use Disqus, however I wanted a way to allow users to comment regardless of whether or not they had a Disqus account. I was adamant to get some form of commenting system working with Jekyll’s use of collections and scripting to send emails of the comments to me, and the use YAML front matter and liquid to sort through comments for each blog post.</p>
+
+<p>Essentially the comments work by filtering through all the files located under the directory ‘_comments’ and sorting said files to their corresponding blog posts, using YAML front matter I can then specify who posted, when they posted and whether it is a new comment thread or reply to an existing comment. The submit comment works by the user selecting if they wish to submit a new comment (default) or reply to a comment thread already posted. The fields of the form then get sent to a Google spreadsheet script and emailed to me, which I then write up into markdown files for Jekyll to generate.</p>
+
+<p>With my endeavours into coding this website and learning (the hard way) how Jekyll and Liquid/Ruby work, I am considering making a portfolio and project section explaining how I went about coding certain aspects of the site, as I feel it may be helpful to some new users of Jekyll - You can already find my website repository on <a href="https://github.com/Chuffs/MicroMattWebsite" target="_blank" class="blog-links">GitHub</a>.</p>
+
+<p>I think that will do for this blog post, hopefully all is well with the design of the website. I will start working on the other pages that my navbar and places link to.</p>
+
+<p>Peace for now,
+Matt</p>
+
+        </div>
+        <div class="blogShare">
+  <span> Share this with your followers: </span>
+  <a href="https://twitter.com/intent/tweet?text=Comments are now live! post on micromatt.tech&url=http://micromatt.tech/blog/&via=chuffs97&related=chuffs97" rel="nofollow" target="_blank" title="Share on Twitter">
+    <i class="fa fa-twitter fa-2x blogShare"></i>
+  </a>
+  <a href="https://facebook.com/sharer.php?u=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Facebook">
+    <i class="fa fa-facebook-official fa-2x blogShare"></i>
+  </a>
+  <a href="https://plus.google.com/share?url=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Google+">
+    <i class="fa fa-google-plus fa-2x blogShare"></i>
+  </a>
+</div>
+
+        <div class="google-ads">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-9063236029631516"
+               data-ad-slot="4845593260"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <hr>
+      
+        <span class="blogTitle"><h3><a href="/blog/2017/12/05/Cookie-Update/">Cookie Update</a></h3></span>
+        <span class="blogComments">
+          
+          
+
+          0 comments
+        </span>
+        <span class="blogComments">
+          ...
+        </span>
+        <div class="blogContentOuter">
+          <p>A small update on the website side of things - We are now using cookies to hide or display the “beta overlay” popup that appears in the bottom right side of the homepage, so that returning visitors don’t continue to see it after they have hit the little ‘x’. You can still see the To-Do list by visiting: <a href="/beta/" target="_blank" class="blog-links">micromatt.tech/beta/</a>.</p>
+
+<p>Over the next few days I’ll be updating the Privacy Policy to reflect this change as well as adding an easy access link to the Policy Page, which can currently be found by visiting <a href="/privacypolicy.htm" target="_blank" class="blog-links">here</a>.</p>
+
+<p>In other news, I should be starting work on the introduction/channel trailer video for the channel shortly - which will then allow me to complete the about page and get that ticked off the list. I want to ideally start releasing videos in the new year, but I think that might have to be delayed somewhat due to the delay in getting the channel trailer finished and a personal holiday coming up. Hopefully the release of the new channel won’t be delayed past the end of Jan 2019, maybe even start in Feb 2019…</p>
+
+<p>I think that is all I have to fill in, peace for now,</p>
+
+<p>Matt</p>
+
+        </div>
+        <div class="blogShare">
+  <span> Share this with your followers: </span>
+  <a href="https://twitter.com/intent/tweet?text=Cookie Update post on micromatt.tech&url=http://micromatt.tech/blog/&via=chuffs97&related=chuffs97" rel="nofollow" target="_blank" title="Share on Twitter">
+    <i class="fa fa-twitter fa-2x blogShare"></i>
+  </a>
+  <a href="https://facebook.com/sharer.php?u=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Facebook">
+    <i class="fa fa-facebook-official fa-2x blogShare"></i>
+  </a>
+  <a href="https://plus.google.com/share?url=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Google+">
+    <i class="fa fa-google-plus fa-2x blogShare"></i>
+  </a>
+</div>
+
+        <div class="google-ads">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-9063236029631516"
+               data-ad-slot="4845593260"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <hr>
+      
+        <span class="blogTitle"><h3><a href="/blog/2017/11/11/Development-Update/">Development Update</a></h3></span>
+        <span class="blogComments">
+          
+          
+
+          0 comments
+        </span>
+        <span class="blogComments">
+          ...
+        </span>
+        <div class="blogContentOuter">
+          <p>The past few weeks have been absolutely hectic.</p>
+
+<p>I’ve been working 30+ hours a week, all whilst studying a full time load and thus have had no time to work on the site. We are in the midst of exam period for uni, with my last exam being next week. Once that it over and done with, I can refocus my attention to getting the site finished and cleaned up.</p>
+
+<p>I am planning on adding the pages that the navbar link to first, followed by improving the layout of the blog post page.. I will then work on making the site more user friendly and working on the mobile side of things - If you are reading this on mobile: I am sorry, I am so so sorry…</p>
+
+<p>Anyways, back to study I go - peace for now,</p>
+
+<p>Matt</p>
+
+        </div>
+        <div class="blogShare">
+  <span> Share this with your followers: </span>
+  <a href="https://twitter.com/intent/tweet?text=Development Update post on micromatt.tech&url=http://micromatt.tech/blog/&via=chuffs97&related=chuffs97" rel="nofollow" target="_blank" title="Share on Twitter">
+    <i class="fa fa-twitter fa-2x blogShare"></i>
+  </a>
+  <a href="https://facebook.com/sharer.php?u=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Facebook">
+    <i class="fa fa-facebook-official fa-2x blogShare"></i>
+  </a>
+  <a href="https://plus.google.com/share?url=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Google+">
+    <i class="fa fa-google-plus fa-2x blogShare"></i>
+  </a>
+</div>
+
+        <div class="google-ads">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-9063236029631516"
+               data-ad-slot="4845593260"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <hr>
+      
+        <span class="blogTitle"><h3><a href="/blog/2017/10/01/Jekyll-Update/">Jekyll Site Update</a></h3></span>
+        <span class="blogComments">
+          
+          
+
+          0 comments
+        </span>
+        <span class="blogComments">
+          ...
+        </span>
+        <div class="blogContentOuter">
+          <p>The site is now using Jekyll!</p>
+
+<p>I have to admit it took a <strong>VERY</strong> long time to convert it to the more fluid and dynamic ways of Jekyll. As you can see the homepage is a <em>little</em> different to what it was in “version one”. I have added a  few more parts to the page, such as sections for an about the site (about me page will be coming later, along with a contact form) as well as a truncated snapshot of the most recent blog post.</p>
+
+<p>I really do like how Jekyll operates and compiles the site, it gives you the option to have a much more versatile and modular webpage design - I just wish the documentation included more. It remind me very much of PHP in the way that you can have several different files combined into one page, for example - our homepage: this page consists of 6 files, but Jekyll compiles it all into one when it ships the site. You use includes to add multiple html files into the one that you see on the site. These includes then allow me to use other sections of the this home page in other pages without having to rewrite all the code.</p>
+
+<p>I think that the homepage is now done, I might add a little more later - touch up on the styling or add a few more sections. To do next is other pages, such as the blog archive, portfolio archive and each post page.</p>
+
+<p>I’ll update the blog once that is done, Peace for now,</p>
+
+<p>Matt</p>
+
+        </div>
+        <div class="blogShare">
+  <span> Share this with your followers: </span>
+  <a href="https://twitter.com/intent/tweet?text=Jekyll Site Update post on micromatt.tech&url=http://micromatt.tech/blog/&via=chuffs97&related=chuffs97" rel="nofollow" target="_blank" title="Share on Twitter">
+    <i class="fa fa-twitter fa-2x blogShare"></i>
+  </a>
+  <a href="https://facebook.com/sharer.php?u=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Facebook">
+    <i class="fa fa-facebook-official fa-2x blogShare"></i>
+  </a>
+  <a href="https://plus.google.com/share?url=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Google+">
+    <i class="fa fa-google-plus fa-2x blogShare"></i>
+  </a>
+</div>
+
+        <div class="google-ads">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-9063236029631516"
+               data-ad-slot="4845593260"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <hr>
+      
+        <span class="blogTitle"><h3><a href="/blog/2017/08/30/Day-One-Blog/">Welcome to MicroMatt.tech!</a></h3></span>
+        <span class="blogComments">
+          
+          
+
+          0 comments
+        </span>
+        <span class="blogComments">
+          ...
+        </span>
+        <div class="blogContentOuter">
+          <p>Welcome to the MicroMatt blog, the blog and project portfolio for micromatt.tech and MicroMatt on YouTube. I plan to update this blog once every week or so with what is going on with certain projects and with the website itself.</p>
+
+<p>As you may have noticed this site is, so far, a one page wonder. There are links that don’t go anywhere, empty spaces, etc, etc. Over the next few months I plan to populate these pages and get a fully working website before the new year, I am also taking steps to make a mobile version of the website. Furthermore, I do plan on adding Jekyll to this site, which will allow me to better serve blot like posts and keep the site up to date - I’ll let you know how it goes.</p>
+
+<p>As for content on this web-based portfolio, expect to see tech content, varying from tech reviews to in depth tech related projects - such as computer/server builds and electronic design.</p>
+
+<p>I don’t plan to start the majority of my larger projects I have planned until the new year and 2018, but I will update this site over the next coming months, some projects that I definitely want to start include a DIY keyboard, a MicroChip PIC18 development board and various home servers.</p>
+
+<p>Now a bit about me - I am a 20 year old tech enthusiast currently studying The Bachelor of Engineering (Computer and Network Science). I have a strong love for all sorts of tech including PC components, programming and electronic design.</p>
+
+<p>If you want to keep up to date with MicroMatt, I have a <a href="https://twitter.com/chuffs97" title="My Twitter" target="_blank" class="blog-links">Twitter account</a> and a <a href="https://www.youtube.com/channel/UCsjYwlaeT48XV7kxRLkE6bw" title="My YouTube Channel" target="_blank" class="blog-links">YouTube account</a> - I do plan to add some form of newsletter at a later stage too.</p>
+
+<p>Thank you for reading the first entry of the blog, I hope to post more and be as active as I can be. Peace for now,</p>
+
+<p>Matt</p>
+
+        </div>
+        <div class="blogShare">
+  <span> Share this with your followers: </span>
+  <a href="https://twitter.com/intent/tweet?text=Welcome to MicroMatt.tech! post on micromatt.tech&url=http://micromatt.tech/blog/&via=chuffs97&related=chuffs97" rel="nofollow" target="_blank" title="Share on Twitter">
+    <i class="fa fa-twitter fa-2x blogShare"></i>
+  </a>
+  <a href="https://facebook.com/sharer.php?u=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Facebook">
+    <i class="fa fa-facebook-official fa-2x blogShare"></i>
+  </a>
+  <a href="https://plus.google.com/share?url=http://micromatt.tech/blog/" rel="nofollow" target="_blank" title="Share on Google+">
+    <i class="fa fa-google-plus fa-2x blogShare"></i>
+  </a>
+</div>
+
+        <div class="google-ads">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-9063236029631516"
+               data-ad-slot="4845593260"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <hr>
+      
+
+      
+      
+
+      <p class="totalPosts">There are 5 posts on the micromatt blog, only
+        
+          5
+        
+          are shown here.
+      </p>
+      <p> Vist the
+        <a href="http://micromatt.tech/blog-archive/" class="blog-links"> Blog Archive </a> for more.
+      </p>
+
+    </div>
+
+    <div class="social-span">
+  <div class="social-container">
+    <a href="https://www.youtube.com/channel/UCsjYwlaeT48XV7kxRLkE6bw"><i class="fa fa-youtube-play fa-3x"></i></a>
+    <a href="https://twitter.com/chuffs97"><i class="fa fa-twitter fa-3x"></i></a>
+    <a href="https://github.com/Chuffs"><i class="fa fa-github fa-3x"></i></a>
+  </div>
+</div>
+
+
+    <div class="footer">
+  <p>&copy;2017 micromatt.tech | <a href="http://micromatt.tech/privacypolicy.htm">Privacy Policy</a> | <a href="http://micromatt.tech/contact/">Contact Us</a>
+</div>
+
+
+  </body>
+</html>
