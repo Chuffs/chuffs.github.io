@@ -50,6 +50,7 @@ div.overlay {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 1em;
   border-radius: 5px;
+  z-index: 9;
 }
 
 div.beta {
@@ -194,6 +195,7 @@ a.beta:hover {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 0;
 }
 
 .logo-span {
@@ -459,13 +461,6 @@ p.commentContent {
   padding-left: 5%;
 }
 
-p.commentPermalink {
-  padding-left: 5%;
-  text-align: right;
-  padding-top: -50px;
-  font-size: 0.75em;
-}
-
 div.commentReplys {
   margin-left: 5%;
   border-left: 1px solid black;
@@ -556,6 +551,16 @@ span.commentShow {
 
 
 div.blogShare {
+  width: 30%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+div.blogShare {
+  display: inline;
+}
+
+div.blogShareInner {
   width: 30%;
   margin: 0 auto;
   padding-bottom: 25px;

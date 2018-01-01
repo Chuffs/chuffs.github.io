@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://micromatt.tech/comments/comments_are_now_live/testcomment/</loc>
-<lastmod>2017-12-18T00:00:00+10:30</lastmod>
-</url>
-<url>
-<loc>http://micromatt.tech/comments/comments_are_now_live/testreply/</loc>
-<lastmod>2017-12-18T00:00:00+10:30</lastmod>
-</url>
-<url>
-<loc>http://micromatt.tech/comments/comments_are_now_live/BenDover_reply_0145am/</loc>
-<lastmod>2017-12-20T00:00:00+10:30</lastmod>
-</url>
-<url>
 <loc>http://micromatt.tech/blog/site-update/self-post/2017-08-30/Day-One-Blog/</loc>
 <lastmod>2017-08-30T00:00:00+09:30</lastmod>
 </url>
@@ -49,6 +37,6 @@
 </url>
 <url>
 <loc>http://micromatt.tech/privacypolicy.htm</loc>
-<lastmod>2017-08-22T14:55:58+09:30</lastmod>
+<lastmod>2017-12-29T22:12:41+10:30</lastmod>
 </url>
 </urlset>
