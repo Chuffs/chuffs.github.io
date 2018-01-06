@@ -550,7 +550,21 @@ span.commentShow {
 }
 
 
-div.blogShare {
+div.contactContent {
+  text-align: center;
+}
+
+a.contactEmail {
+  font-style: italic;
+  color: #649cb4
+}
+
+a.contactEmail:hover {
+  font-weight: bold;
+}
+
+
+div.blogShare {x
   width: 30%;
   margin: 0 auto;
   padding-bottom: 25px;

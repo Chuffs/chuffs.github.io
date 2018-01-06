@@ -1,1 +1,6 @@
 Sitemap: http://micromatt.tech/sitemap.xml
+
+User-Agent: *
+
+Disallow: /comments/*
+
