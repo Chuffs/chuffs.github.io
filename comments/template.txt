@@ -3,3 +3,5 @@ post: if new comment "post.title"
 postID: if reply to comment "comment.id"
 date:
 time:
+layout: comment_thread
+belongs_to: "Comments are now live!"
