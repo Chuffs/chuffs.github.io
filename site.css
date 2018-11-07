@@ -529,6 +529,13 @@ td.commentForm {
   text-align: center;
 }
 
+span.caption {
+  display: block;
+  text-align: center;
+
+  font-style: italic;
+}
+
 
 span.blogTitle {
   display: block;
