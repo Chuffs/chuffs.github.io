@@ -1,8 +1,9 @@
 <! DOCTYPE html>
 <html>
-  <head>
 
-    <!-- Begin Jekyll GTM tag v1.0.1 -->
+<head>
+
+  <!-- Begin Jekyll GTM tag v1.0.1 -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -77,77 +78,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-    <!-- script to change logo-image size depending on screen size -->
-<script>
-  $(document).ready(function(){
-    var windowwidth = $(window).width();
-    var imagewidth = windowwidth/2;
-    if(imagewidth > 300){
-      $('#logo-image').width(300)
-    } else {
-      $('#logo-image').width(imagewidth);
-    }
-  })
-  $(window).on('resize', function(){
-    var windowwidth = $(window).width();
-    var imagewidth = windowwidth/2;
-    if(imagewidth > 300){
-      $('#logo-image').width(300)
-    } else {
-      $('#logo-image').width(imagewidth);
-    }
-  })
-</script>
+  <title> Home | micromatt.tech </title>
+</head>
 
-    <!-- change blue-span height and size of word cloud -->
-<script>
-  $(document).ready(function(){
-    var windowWidth = $(window).width();
-    var cloudWidth = windowWidth/1.5;
-
-    if(cloudWidth > 400){
-      $('#word-cloud').width(400);
-    } else {
-      $('#word-cloud').width(cloudWidth);
-    }
-  })
-  $(window).on('resize', function(){
-    var windowWidth = $(window).width();
-    var cloudWidth = windowWidth/1.5;
-
-    if(cloudWidth > 400){
-      $('#word-cloud').width(400);
-    } else {
-      $('#word-cloud').width(cloudWidth);
-    }
-  })
-</script>
-
-    <!-- script to alter sizing of blog & portfolio icons -->
-<script>
-  $(document).ready(function(){
-    var windowWidth = $(window).width();
-    var iconWidth = windowWidth * 0.15;
-
-    if(iconWidth > 200){
-      $('.bp-icon').width(200);
-    } else {
-      $('.bp-icon').width(iconWidth);
-    }
-
-  })
-</script>
-
-
-    <title> Home | micromatt.tech </title>
-  </head>
-  <body onload="checkOverlayCookie()">
-      <!-- Begin Jekyll GTM tag v1.0.1 -->
+<body onload="checkOverlayCookie()">
+  <!-- Begin Jekyll GTM tag v1.0.1 -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQS8N26"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Jekyll GTM tag v1.0.1 -->
 
-      <!--  TO-DO List for website development -->
+  <!--  TO-DO List for website development -->
 <!-- beta overlay javascript -->
 <!-- script to toggle view of beta-overlay -->
 <script>
@@ -199,65 +139,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
+  <div>
     <div>
-      <div>
 
-        <div class="navbar">
-  <!-- Green bar at top of page -->
-  <div class="style-bar"></div>
-  <!-- Website navigation -->
-    <ul class="navbar">
-      <div class="navbar-nav" id="navbar">
-        <li class="navbar"><a href="/"><img src="http://micromatt.tech/assets/websitelogo.png" style="width: 10em" class="navbar-logo" alt="micromatt.tech logo" title="back to home"></a></li>
-        <li class="navbar"><a href="http://micromatt.tech/blog/" class="navbar-item">Blog</a></li>
-        <li class="navbar"><a href="http://micromatt.tech/projects/" class="navbar-item">Projects</a></li>
-        <li class="navbar"><a href="http://micromatt.tech/about/" class="navbar-item">About</a></li>
-        <li class="navbar"><a href="http://micromatt.tech/contact/" class="navbar-item">Contact</a></li>
-        <li class="navbar"><a href="javascript:void(0);" style="font-size:25px;" class="navbar-toggle" onclick="navbarToggle()">&#9776;</a></li>
-      </div>
-    </ul>
-</div>
-<div class="link" id="mobile-nav">
-  <div class="mobile-link">
-    <a href="http://micromatt.tech/blog/">Blog</a>
-  </div>
-  <div class="mobile-link">
-    <a href="http://micromatt.tech/projects/">Projects</a>
-  </div>
-  <div class="mobile-link">
-    <a href="http://micromatt.tech/about/">About</a>
-  </div>
-  <div class="mobile-link">
-    <a href="http://micromatt.tech/contact/">Contact</a>
-  </div>
-</div>
-
-
-        <div class="hero-image" id="hero-image">
-          <div>
-            <p class="logo-span"><img src="http://micromatt.tech/assets/circlelogo.png" id="logo-image" alt="micromatt.tech logo"></p>
-          </div>
-        </div>
-
+      <!- Parallax image && Logo ->
+      <div class="hero-image" id="hero-image">
+        <div class="home-nav home-title"><a href="/" class="home-nav">microMatt<a></div>
         <div>
-          <div class="span-blue" id="span">
-            <p class="wordcloud"><img src="http://micromatt.tech/assets/Word Cloud.png" id="word-cloud" alt="Hi! I'm Matt, and welcome to my site"></p>
-          </div>
+          <ul class="home-nav-links">
+            <li class="home-nav-links"><a href="http://micromatt.tech/blog/" class="home-nav-links">Blog</a></li>
+            <li class="home-nav-links home-nav-spacer"> | </li>
+            <li class="home-nav-links"><a href="http://micromatt.tech/projects/" class="home-nav-links">Projects</a></li>
+            <li class="home-nav-links home-nav-spacer"> | </li>
+            <li class="home-nav-links"><a href="http://micromatt.tech/about/" class="home-nav-links">About</a></li>
+            <li class="home-nav-links home-nav-spacer"> | </li>
+            <li class="home-nav-links"><a href="http://micromatt.tech/contact/" class="home-nav-links">Contact</a></li>
+          </ul>
         </div>
 
-        <div class="span-grey">
-            <div class="span-grey-div">
-              <p class="link-span">
-                <a href="http://micromatt.tech/projects/">
-                  <img src="http://micromatt.tech/assets/portfolio-icon.png" class="span-grey-img" alt="This site contains my portfolio">
-                </a>
-                <a href="http://micromatt.tech/blog/">
-                  <img src="http://micromatt.tech/assets/blog-icon.png" class="span-grey-img" alt="This site contains my blog">
-                </a>
-              </p>
-            </div>
-        </div>
+        <img src="http://micromatt.tech/assets/circlelogo.png" class="logo-image" alt="micromatt.tech logo"></p>
+      </div>
 
+      <!- Dynamic recent activity on blog ->
+      <div class="home-content">
         <div class="blog-content-home">
           <div class="recent-post">
             <h1 class="recent-post">Recent Blog Activity: </h1>
@@ -266,40 +170,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               
               
               <h2>
-  
-    <a href="/blog/site-update/self-zpost/2018-02-07/2018-Update/" class="blog-title-home">2018 Update</a>
-  
-</h2>
-<div class="recent-blog-content">
-  <div class="entry-content"><p>Well it’s pretty far into the start of 2018, and it has been off to a hectic start. I spent the first 2 weeks of 2018 in the UK, visiting family and friends and so I didn’t really get chance to update much of the blog and/or website. I did, however, manage to fix the contact page from acting weird - damn closing tags!</p> <p>The next 2 weeks I spent moving in with a few friends, sifting through footage that I took on my trip and settling back into work. Over the next month I plan to start studying again, finish building the website and start some of the projects that I have planned - most likely starting on the...</div>
-  <a class="btn btn-default" href="/blog/site-update/self-zpost/2018-02-07/2018-Update/"></a>
-  
-    <p class="continue"><a href="/blog/site-update/self-zpost/2018-02-07/2018-Update/" class="continue">Continue Reading...</a></p>
-  
-</div>
-
+                
+                <a href="/blog/site-update/self-post/2018-02-07/2018-Update/" class="blog-title-home">2018 Update</a>
+                
+              </h2>
+              <div class="recent-blog-content">
+                <div class="entry-content"><p>Well it’s pretty far into the start of 2018, and it has been off to a hectic start. I spent the first 2 weeks of 2018 in the UK, visiting family and friends and so I didn’t really get chance to update much of the blog and/or website. I did, however, manage to fix the contact page from acting weird - damn closing tags!</p> <p>The next 2 weeks I spent moving in with a few friends, sifting through footage that I took on my trip and settling back into work. Over the next month I plan to start studying again, finish building the website and start some of the projects that I have planned - most likely starting on the...</div>
+                <a class="btn btn-default" href="/blog/site-update/self-post/2018-02-07/2018-Update/"></a>
+                
+                <p class="continue"><a href="/blog/site-update/self-post/2018-02-07/2018-Update/" class="continue">Continue Reading...</a></p>
+                
+              </div>
             </div>
           </div>
           <div class="all-posts">
             <h1 class="all-posts"><a href="http://micromatt.tech/archive/">All Posts: </a></h1>
-              
-                <h3 class="all-posts"><a href="/blog/site-update/2017-12-18/Comments-Update/">Comments are now live!</a></h3>
-                
-                <h3 class="all-posts"><a href="/blog/site-update/2017-12-05/Cookie-Update/">Cookie Update</a></h3>
-                
-                <h3 class="all-posts"><a href="/blog/site-update/self-post/2017-11-11/Development-Update/">Development Update</a></h3>
-                
-                <h3 class="all-posts"><a href="/blog/site-update/2017-10-01/Jekyll-Update/">Jekyll Site Update</a></h3>
-                
-                <h3 class="all-posts"><a href="/blog/site-update/self-post/2017-08-30/Day-One-Blog/">Welcome to MicroMatt.tech!</a></h3>
-                
-              <hr>
-              <h3 class="all-posts"><a href="http://micromatt.tech/archive/">Post Archive</a></h3>
+            
+            <h3 class="all-posts"><a href="/blog/site-update/2017-12-18/Comments-Update/">Comments are now live!</a></h3>
+            
+            <h3 class="all-posts"><a href="/blog/site-update/2017-12-05/Cookie-Update/">Cookie Update</a></h3>
+            
+            <h3 class="all-posts"><a href="/blog/site-update/self-post/2017-11-11/Development-Update/">Development Update</a></h3>
+            
+            <h3 class="all-posts"><a href="/blog/site-update/2017-10-01/Jekyll-Update/">Jekyll Site Update</a></h3>
+            
+            <h3 class="all-posts"><a href="/blog/site-update/self-post/2017-08-30/Day-One-Blog/">Welcome to MicroMatt.tech!</a></h3>
+            
+            <hr>
+            <h3 class="all-posts"><a href="http://micromatt.tech/archive/">Post Archive</a></h3>
           </div>
         </div>
-      </div>
 
-      <div class="social-span">
+        <hr class="home-page">
+
+        <!- Dynamic recent projects activity ->
+        <div class="blog-content-home">
+          <div class="recent-post">
+            <h1 class="recent-post">Recent Project Activity: </h1>
+            <div>
+              
+              
+              
+              <h2>
+                
+                <a href="/projects/myWebsite/JekyllSetup/" class="blog-title-home">The micromatt Website</a>
+                
+              </h2>
+              <div class="recent-blog-content">
+                
+              <div class="entry-content"><p>Writing your own website gives you full control over the design and content of your site, it can also be an amazing learning opportunity to learn how webpages are coded and the technologies that go into making them.</p> <p>This site was built at the back end of 2017 and the start of 2018 and was a part time project of mine. I enjoyed the design aspect of crafting my own aesthetically pleasing site and learning the coding behind. This project portfolio will go through the design aspects and coding challenges that I faced when building this website, in the hopes that it will help others achieve similar results in the future.</p> <p>Preface: This portfolio assumes some basic knowledge of HTML...</div>
+              <a class="btn btn-default" href="/blog/site-update/self-post/2018-02-07/2018-Update/"></a>
+              <p class="continue"><a href="/projects/myWebsite/JekyllSetup/" class="continue">Continue to Project...</a></p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="all-posts">
+          <h1 class="all-posts"><a href="http://micromatt.tech/archive/">All Projects: </a></h1>
+          
+          
+          <h3 class="all-posts"><a href="/projects/myWebsite/projectIntro/">The micromatt Website</a></h3>
+          
+          <hr>
+          <h3 class="all-posts"><a href="http://micromatt.tech/projects/">All Projects</a></h3>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="social-span">
   <div class="social-container">
     <a href="https://www.youtube.com/channel/UCsjYwlaeT48XV7kxRLkE6bw"><i class="fa fa-youtube-play fa-3x"></i></a>
     <a href="https://twitter.com/chuffs97"><i class="fa fa-twitter fa-3x"></i></a>
@@ -308,11 +247,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-      <div class="footer">
-  <p>&copy;2017 micromatt.tech | <a href="http://micromatt.tech/privacypolicy.htm">Privacy Policy</a> | <a href="http://micromatt.tech/contact/">Contact Us</a>
+    <div class="footer">
+  <p>&copy;2018 micromatt.tech | <a href="http://micromatt.tech/privacypolicy.htm">Privacy Policy</a> | <a href="http://micromatt.tech/contact/">Contact Us</a>
 </div>
 
 
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>

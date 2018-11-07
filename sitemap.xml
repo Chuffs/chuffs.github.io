@@ -21,8 +21,14 @@
 <lastmod>2017-12-18T00:00:00+10:30</lastmod>
 </url>
 <url>
-<loc>http://micromatt.tech/blog/site-update/self-zpost/2018-02-07/2018-Update/</loc>
+<loc>http://micromatt.tech/blog/site-update/self-post/2018-02-07/2018-Update/</loc>
 <lastmod>2018-02-07T00:00:00+10:30</lastmod>
+</url>
+<url>
+<loc>http://micromatt.tech/projects/myWebsite/JekyllSetup/</loc>
+</url>
+<url>
+<loc>http://micromatt.tech/projects/myWebsite/projectIntro/</loc>
 </url>
 <url>
 <loc>http://micromatt.tech/about/</loc>
@@ -41,6 +47,9 @@
 </url>
 <url>
 <loc>http://micromatt.tech/</loc>
+</url>
+<url>
+<loc>http://micromatt.tech/projects/</loc>
 </url>
 <url>
 <loc>http://micromatt.tech/privacypolicy.htm</loc>
