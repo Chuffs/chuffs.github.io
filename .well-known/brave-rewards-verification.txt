@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: micromatt.tech 
+Token: b2fe11a717e04e4efcaae39ef0fb016d2b43dc73483e5fde054edb5501fddff1
