@@ -1,0 +1,257 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> Jekyll Setup | micromatt.tech</title>
+
+    <!-- Begin Jekyll GTM tag v1.0.1 -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQS8N26');</script>
+<!-- End Jekyll GTM tag v1.0.1 -->
+
+
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+<!-- SEO -->
+<title>
+  
+    Jekyll Setup | micromatt.tech
+  
+</title>
+
+<meta itemprop="description" name="description" content="
+  
+    In this post we will look at how the backbone of the website is created and the tools I use to code, test and implement the website.
+  " />
+
+<meta property="og:title" content="
+  
+    Jekyll Setup | micromatt.tech
+  " />
+
+<meta property="og:locale" content="en_AU" />
+<meta proterty="og:description" content="
+  
+    In this post we will look at how the backbone of the website is created and the tools I use to code, test and implement the website.
+  "/>
+<meta property="og:url" content="http://micromatt.tech/projects/micromatt_website/L1_Jekyll_Setup/"/>
+<meta property="og:site_name" content="micromatt.tech"/>
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@chuffs97" />
+<meta name="twitter:creator" content="@chuffs97" />
+
+<link rel="canonical" href="http://micromatt.tech/projects/micromatt_website/L1_Jekyll_Setup/">
+
+<!-- Script for Adobe Typekit -->
+<script src="https://use.typekit.net/pob8zuk.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<!-- Stylesheets for website -->
+<link rel = "stylesheet" type = "text/css" href = "http://micromatt.tech/site.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+
+<!-- JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- Favicon -->
+<link rel = "shortcut icon" href = "/assets/favicon.ico">
+
+<!-- Responsive NavBar JS -->
+<!-- script to toggle menu on mobile devices -->
+<script>
+  function navbarToggle() {
+      var x = document.getElementById("mobile-nav");
+      if (x.className === "link") {
+          x.className += "-toggled";
+      } else {
+          x.className = "link";
+      }
+  }
+</script>
+
+
+
+  </head>
+  <body>
+
+    <!-- Begin Jekyll GTM tag v1.0.1 -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQS8N26"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Jekyll GTM tag v1.0.1 -->
+
+    <div class="navbar">
+  <!-- Green bar at top of page -->
+  <div class="style-bar"></div>
+  <!-- Website navigation -->
+    <ul class="navbar">
+      <div class="navbar-nav" id="navbar">
+        <li class="navbar"><a href="/"><img src="http://micromatt.tech/assets/websitelogo.png" style="width: 10em" class="navbar-logo" alt="micromatt.tech logo" title="back to home"></a></li>
+        <li class="navbar"><a href="http://micromatt.tech/blog/" class="navbar-item">Blog</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/projects/" class="navbar-item">Projects</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/about/" class="navbar-item">About</a></li>
+        <li class="navbar"><a href="http://micromatt.tech/contact/" class="navbar-item">Contact</a></li>
+        <li class="navbar"><a href="javascript:void(0);" style="font-size:25px;" class="navbar-toggle" onclick="navbarToggle()">&#9776;</a></li>
+      </div>
+    </ul>
+</div>
+<div class="link" id="mobile-nav">
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/blog/">Blog</a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/projects/">Projects</a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/about/">About</a>
+  </div>
+  <div class="mobile-link">
+    <a href="http://micromatt.tech/contact/">Contact</a>
+  </div>
+</div>
+
+
+    <div class="page-content project">
+      <h1 class="blog-title">Jekyll Setup</h1>
+
+      <div class="inner-content">
+        &laquo; <a href="/projects/micromatt_website/intro/">Project Home</a> &raquo;
+
+        <p>When I first made this website I created every single page individually and painstakingly tested each and every link and each and every margin/padding and design of the page. I started thinking to myself “This is going to become extremely hard once I add more than 10 blog entries to the site… There must be another way…” That’s when I discovered <a href="https://jekyllrb.com/" target="_blank" class="blog-links">Jekyll</a>.</p>
+
+<p>Jekyll is a ruby gem program available on many linux distributions that allows you to make a dynamic website into static pages to be hosted on a simple webhoster such as Github Pages. Using this tool, you can create a website that has thousands of blog posts and not have to worry about writing each page separately.</p>
+
+<p>Installing Jekyll on a linux distribution is fairly straight forward, just make sure you have rubygems installed and up to date and follow the instructions found on the (<a href="https://jekyllrb.com/" target="_blank" class="blog-links">Jekyll Homepage</a>).</p>
+
+<p>On windows you have two options. Ruby can be used on windows via <a href="https://rubyinstaller.org/" target="_blank" class="blog-links">Ruby Installer for Windows</a> and then used via PowerShell or CMD. Another way to run Jekyll on Windows is to use the Linux Subsystem for Windows - which if you have need for any other linux based tools, is a very useful addition to Windows 10. This is the method that I use regularly as my main driver is a Custom Built Desktop running Windows 10.</p>
+
+<p>Once Jekyll is installed simply run <em><strong><code class="highlighter-rouge">jekyll new [mywebsite]</code></strong></em> in the directory that you want your new site to be. Then cd into that directory and run the following <em><strong><code class="highlighter-rouge">bundle exec jekyll serve</code></strong></em> to host the website on your own network for testing and development, or use <em><strong><code class="highlighter-rouge">bundle exec jekyll build</code></strong></em> to generate the static files used to host your site on a website hoster such as <a href="https://pages.github.com/" target="_blank" class="blog-links">Github Pages</a>.</p>
+
+<p>If the last command is successful, you should get the following result;</p>
+
+<div style="text-align: center">
+  <img src="/assets/projects/cmd_snippet_001.png" alt="A Snapshot showing a successful output" />
+  <span class="caption">A Snapshot showing a successful output</span>
+</div>
+
+<p>Now you can navigate to <em><strong><code class="highlighter-rouge">localhost:4000</code></strong></em> in your web browser to view your newly created website.</p>
+
+<p>To get your new site ready for static web hosting, there are a few variables that need to be changed in the _config.yml file - mainly the baseurl and url variables. These variables tell jekyll the url of your site (e.g., “http://micromatt.tech”) and the baseurl of your site (e.g., “/blog” in “http://micromatt.tech/blog”), all the other variables may be filled in or left as they are.</p>
+
+<hr />
+<h3 id="advanced-section">Advanced Section</h3>
+<p>Your <code class="highlighter-rouge">_config.yml</code> file can also be used to help the creation of other pages by taking advantage of custom variables. Variables created in your config file can be used globally, but the server must be restarted before they take effect as the config file is exempt from auto-regeneration. We will delve deeper into how and why we do this and further usage examples later.</p>
+
+<div style="text-align: center">
+  <img src="/assets/projects/config_yml_snippet_001.png" alt="Some of the custom variables set for micromatt.tech" />
+  <span class="caption">Some of the custom variables set for micromatt.tech</span>
+</div>
+
+<p>One issue that I came across when creating The Micromatt Website was differences in the url of pages and content that didn’t coincide, both when the files had been hosted on GitHub Pages as well as locally hosted. This was because Jekyll was using the baseurl and url defined in my <code class="highlighter-rouge">_config.yml</code> and that did not match with the location of the files hosted on localhost (and vice versa). The way around this was to define a second config file that was used in development, and use overlapping variables. To overcome this I created a second config file named <code class="highlighter-rouge">_config_dev.yml</code> and used the argument <code class="highlighter-rouge">--config</code> when starting the server locally.</p>
+
+<p>I still use <em><strong><code class="highlighter-rouge">bundle jekyll build</code></strong></em> to produce the static files to upload to GitHub Pages, but now use <em><strong><code class="highlighter-rouge">bundle exec jekyl serve --config '_config.yml,_config_dev.yml'</code></strong></em> when I want to test the site locally and make changes to it.</p>
+
+<p>I hope that this first lesson has been useful and helpful to those of you who would like to try their hand at making their own website (without tools such as Squarespace or other ‘Drag and Drop’ website creators). If you have any issues, feel free to post a comment below and I’ll do my best to help you out.</p>
+
+<hr />
+<h3 id="further-reading-and-useful-links">Further Reading and Useful Links</h3>
+<ul>
+  <li><a href="https://jekyllrb.com/docs/configuration/" target="_blank" class="blog-links">Jekyll Documentation</a> on configuration, namely <a href="https://jekyllrb.com/docs/configuration/options/" target="_blank" class="blog-links">Configuration Options</a>, which gives you all the commands and variables you can use in the <code class="highlighter-rouge">_config.yml</code> file.</li>
+</ul>
+
+      </div>
+
+      <hr>
+
+      
+
+
+<div class="numComments">
+
+  <h2><u>Comments</u></h2>
+
+  
+    <p  class="noComments">No Comments found! Start the discussion below!</p>
+  
+
+</div>
+
+<div class="comments">
+  
+</div>
+
+<hr>
+
+<div class="sumbitComment">
+  <h3 class="postComment">Post a comment</h3>
+<p style="font-style: italic; font-size: 0.9em;">
+  All comments are held for moderation; basic HTML or Markdown formatting accepted.
+</p>
+
+  <form id="gform" method="POST" class="pure-form pure-form-stacked" class="comment"
+  action="https://script.google.com/macros/s/AKfycbyvRVcJjsme-GGnlHtVHTxnYu7AcR-IPVDQUUvraiSHZ98lUN8/exec">
+
+    <table class="comment">
+      <tr>
+        <th>Name:</th>
+        <td><input type="text" size="25" name="name" placeholder="John Smith"/> (required)</td>
+      </tr>
+      <tr>
+        <th>E-mail:</th>
+        <td><input type="text" size="25" name="email" placeholder="your.name@email.com"/> (required, not published)</td>
+        <span id="email-invalid" style="display:none; font-color: red;">Please enter a valid email address!</span>
+      </tr>
+      <tr>
+        <th>Please Select:</th>
+        <td>
+          <select name="Post ID">
+            <option value="Comment on Jekyll Setup">Submit New Comment</option>
+
+            
+          </select>
+          (hover for comment hint)
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><textarea name="message" rows="10" cols="60"></textarea></td>
+      </tr>
+      <tr>
+        <td class="commentForm"><input type="submit" name="submit" value="Submit Comment"/></td>
+      </tr>
+    </table>
+
+  </form>
+
+<!-- Customise the Thankyou Message People See when they submit the form: -->
+<div style="display:none;" id="thankyou_message">
+  <h2>Thank you for your comment! Your comment is queued for moderation.</h2>
+  <h4>If you wish to contact us, please use our <em><a href="/contact/">contact form</a></em> instead.<h4>
+</div>
+
+</div>
+
+
+    </div>
+
+    <div class="social-span">
+  <div class="social-container">
+    <a href="https://www.youtube.com/channel/UCsjYwlaeT48XV7kxRLkE6bw"><i class="fa fa-youtube-play fa-3x"></i></a>
+    <a href="https://twitter.com/chuffs97"><i class="fa fa-twitter fa-3x"></i></a>
+    <a href="https://github.com/Chuffs"><i class="fa fa-github fa-3x"></i></a>
+  </div>
+</div>
+
+
+    <div class="footer">
+  <p>&copy;2019 micromatt.tech | <a href="http://micromatt.tech/privacypolicy.htm">Privacy Policy</a> | <a href="http://micromatt.tech/contact/">Contact Me</a>
+</div>
+
+
+  </body>
+</html>
