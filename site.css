@@ -220,6 +220,12 @@ a.navbar-mobile {
   margin: 0 auto;
 }
 
+@media screen and (max-width : 620px) {
+  .home-title {
+    font-size: 3.5em;
+  }
+}
+
 .home-nav p {
     font-size: 5em;
 }
@@ -355,6 +361,19 @@ hr.home-page {
   max-width: 1100px
 }
 
+@media screen and (min-width : 621px) {
+  .blog-content-home {
+    padding-bottom: 125px;
+  }
+}
+
+/* smaller than 620px */
+@media screen and (max-width : 620px) {
+  .blog-content-home {
+    padding-bottom: 250px;
+  }
+}
+
 .social-span {
   margin-top: 50px;
   height: 115px;
@@ -412,17 +431,7 @@ div.footer a {
 }
 
 
-@media screen and (min-width : 621px) {
-  .blog-content {
-    padding-top: 125px;
-  }
-}
 
-@media screen and (max-width : 620px) {
-  .blog-content {
-    padding-top: 30px;
-  }
-}
 
 .blog-content {
   padding-bottom: 200px;
