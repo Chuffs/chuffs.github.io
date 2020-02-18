@@ -103,16 +103,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="link" id="mobile-nav">
   <div class="mobile-link">
-    <a href="http://micromatt.tech/blog/">Blog</a>
+    <a class="navbar-mobile" href="http://micromatt.tech/blog/">Blog</a>
   </div>
   <div class="mobile-link">
-    <a href="http://micromatt.tech/projects/">Projects</a>
+    <a class="navbar-mobile" href="http://micromatt.tech/projects/">Projects</a>
   </div>
   <div class="mobile-link">
-    <a href="http://micromatt.tech/about/">About</a>
+    <a class="navbar-mobile" href="http://micromatt.tech/about/">About</a>
   </div>
   <div class="mobile-link">
-    <a href="http://micromatt.tech/contact/">Contact</a>
+    <a class="navbar-mobile" href="http://micromatt.tech/contact/">Contact</a>
   </div>
 </div>
 
@@ -136,8 +136,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>If the last command is successful, you should get the following result;</p>
 
 <div style="text-align: center">
-  <img src="/assets/projects/cmd_snippet_001.png" alt="A Snapshot showing a successful output" />
-  <span class="caption">A Snapshot showing a successful output</span>
+  <span><a href="/assets/projects/cmd_snippet_001.png"><img class="blog-image" src="/assets/projects/cmd_snippet_001.png" alt="A Snapshot showing a successful output" /></a></span>
+  <span class="caption">A Snapshot showing a successful output <br /> (Click to view Larger)</span>
 </div>
 
 <p>Now you can navigate to <em><strong><code class="highlighter-rouge">localhost:4000</code></strong></em> in your web browser to view your newly created website.</p>
@@ -149,8 +149,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Your <code class="highlighter-rouge">_config.yml</code> file can also be used to help the creation of other pages by taking advantage of custom variables. Variables created in your config file can be used globally, but the server must be restarted before they take effect as the config file is exempt from auto-regeneration. We will delve deeper into how and why we do this and further usage examples later.</p>
 
 <div style="text-align: center">
-  <img src="/assets/projects/config_snippet_001.png" alt="Some of the custom variables set for micromatt.tech" />
-  <span class="caption">Some of the custom variables set for micromatt.tech</span>
+  <span><a href="/assets/projects/config_snippet_001.png"><img class="blog-image" src="/assets/projects/config_snippet_001.png" alt="Some of the custom variables set for micromatt.tech" /></a></span>
+  <span class="caption">Some of the custom variables set for micromatt.tech <br /> (Click to view Larger)</span>
 </div>
 
 <p>One issue that I came across when creating The Micromatt Website was differences in the url of pages and content that didn’t coincide, both when the files had been hosted on GitHub Pages as well as locally hosted. This was because Jekyll was using the baseurl and url defined in my <code class="highlighter-rouge">_config.yml</code> and that did not match with the location of the files hosted on localhost (and vice versa). The way around this was to define a second config file that was used in development, and use overlapping variables. To overcome this I created a second config file named <code class="highlighter-rouge">_config_dev.yml</code> and used the argument <code class="highlighter-rouge">--config</code> when starting the server locally.</p>
