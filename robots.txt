@@ -1,6 +1,5 @@
-Sitemap: http://micromatt.tech/sitemap.xml
+Sitemap: http://mljl.tech/sitemap.xml
 
 User-Agent: *
 
 Disallow: /comments/*
-
